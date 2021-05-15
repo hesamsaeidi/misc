@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+import sys
+from datetime import datetime, date
+
+try:
+    if len(sys.argv) > 4:
+        print("you need to insert MONTH DAY YEAR!")
+        sys.exit(1)
+    month = int(sys.argv[1])
+    day = int(sys.argv[2])
+    year = int(sys.argv[3])
+except IndexError:
+    print("you need to insert MONTH DAY YEAR!")
+    sys.exit(1)
+except ValueError:
+    print("you need to insert MONTH DAY YEAR by numbers!")
+    sys.exit(1)
+
+# #define if it is a leap year
+# leap = False
+# if year%4 == 0:
+#     if year%100 == 0:
+#         if year%400 == 0:
+#             leap = True
+#         else:
+#             leap = False
+#     else:
+#         leap = True
+# else:
+#     leap = False
+
+
+day_of_year = date(year, month, day).timetuple().tm_yday
+print('\n Calendar Date ', month, day, year, '\n Julian Date ', day_of_year, year, '\n')
