@@ -47,7 +47,7 @@ def is_south(stlat, stlon):
 
 
 
-with open("/Users/hesam/TOMO/dataAFRICA/allData.out", "r") as bf:
+with open("/Path/to/allData.out", "r") as bf:
     allData = bf.readlines()
 
 for i in range(len(allData)):
@@ -63,7 +63,7 @@ for i in range(len(allData)):
         southern_sta.add((stlat, stlon))
         southern_pup.append(backAz)
 
-with open("/Users/hesam/test/raypathPlot/allData.out.Glob", "r") as bf:
+with open("/Path/to/allData.out.Glob", "r") as bf:
     allDataGlob = bf.readlines()
 
 for i in range(len(allDataGlob)):
